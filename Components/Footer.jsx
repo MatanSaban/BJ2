@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import lnkdinlogo from '../public/LinkedinLogo.png'
 
 const Footer = (props) => {
     return ( 
@@ -9,7 +10,7 @@ const Footer = (props) => {
                 <a className="lnkdinLogo">
                     <Image
                         className="lnkdin"
-                        src="/LinkedInLogo.png"
+                        src={lnkdinlogo}
                         alt="LinkedInLogo"
                         width="25"
                         height="25px"

@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Header title={"BlackJack"} userState={userState} username={username} handleLogin={handleLogin} handleLogout={handleLogout}/>
       <Component {...pageProps} userState={userState} username={username} handleLogin={handleLogin} />
-      <Footer title={"Made By Matan Saban"} LinkedIn={'https://www.linkedin.com/in/matansaban'}/>
+      <Footer title={"Made By Matan Saban"} LinkedIn={'https://www.linkedin.com/in/matansaban'}/> 
     </>
 )
 

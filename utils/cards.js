@@ -8,16 +8,16 @@ const fullDeck = cards.reduce(
     []
 );
 export const insertNewDeck = (id) => {
-    const decks = JSON.parse(fs.readFileSync("./decks.json"));
+    const decks = JSON.parse(fs.readFileSync("./pages/api/decks.json"));
     decks[id] = _.shuffle(fullDeck);
-    fs.writeFileSync("./decks.json", JSON.stringify(decks));
+    fs.writeFileSync("./pages/api/decks.json", JSON.stringify(decks));
     console.log("decks from cards.js");
     console.log(decks);
     return decks[id];
 };
 
 export const hit = (id, count = 1) => {
-    const decks = JSON.parse(fs.readFileSync("./decks.json"));
+    const decks = JSON.parse(fs.readFileSync("./pages/api/decks.json"));
 
     console.log("decks from cards.js -> hit function");
     console.log(decks);
@@ -26,7 +26,7 @@ export const hit = (id, count = 1) => {
         throw Error("Not Deck");
     }
     const cards = new Array(count).fill(0).map((_) => decks[id].shift());
-    fs.writeFileSync("./decks.json", JSON.stringify(decks));
+    fs.writeFileSync("./pages/api/decks.json", JSON.stringify(decks));
     return cards;
 };
 

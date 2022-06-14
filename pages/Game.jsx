@@ -179,7 +179,7 @@ const Game = (props) => {
                             </button>
                         )}
                         {bettingMode && cash > 0 && bettingMode ? (
-                            !!betSubmit && <p>Your Bet: {betSubmit}</p>
+                            !!betSubmit && <p>Your Bet: {betSubmit}$</p>
                         ) : (
                             <p>Bet Mode OFF</p>
                         )}
